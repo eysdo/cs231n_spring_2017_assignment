@@ -178,6 +178,7 @@ class KNearestNeighbor(object):
       #########################################################################
 
       distances=dists[i,:]
+      #np.argsort返回数组值从小到大的索引值
       indexes = np.argsort(distances)
       closest_y=self.y_train[indexes[:k]]
       #########################################################################
