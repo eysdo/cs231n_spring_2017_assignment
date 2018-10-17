@@ -190,7 +190,9 @@ class KNearestNeighbor(object):
       #########################################################################
 
       #Calculate the number of occurrences of all the numbers
+      #np.bincount(closest_y)计算closest_y中元素索引值作为closest_y中元素值出现的次数
       count = np.bincount(closest_y)
+      #np.argmax返回最大值的索引
       y_pred[i] = np.argmax(count)
       #########################################################################
       #                           END OF YOUR CODE                            # 
